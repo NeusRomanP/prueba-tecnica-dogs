@@ -19,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('store-dog', [App\Http\Controllers\DogController::class, 'store']);
+Route::get('dogs', [App\Http\Controllers\DogController::class, 'index']);

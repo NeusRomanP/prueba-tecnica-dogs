@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class DogController extends Controller
 {
@@ -12,7 +13,9 @@ class DogController extends Controller
      */
     public function index()
     {
-        //
+        $dogs = Dog::paginate(12);
+
+        return response()->json($dogs);
     }
 
     /**
