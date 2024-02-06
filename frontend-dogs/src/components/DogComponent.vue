@@ -2,7 +2,7 @@
   <q-item
     clickable
     tag="a"
-    :href="'./'"
+    :href="`./dogs/${dog.id}`"
     class="flex-column"
   >
     <picture>
