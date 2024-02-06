@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class DogController extends Controller
 {
@@ -51,7 +52,9 @@ class DogController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $dog = Dog::find($id);
+
+        return response()->json($dog);
     }
 
     /**
@@ -75,6 +78,13 @@ class DogController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $dog = Dog::find($id);
+
+        $fileRoute = public_path('storage/images/'.$dog->img);
+        Storage::disk('public')->delete($fileRoute);
+
+        $dog->delete();
+
+        return back()->with('success', 'Dog deleted successfully!');
     }
 }
