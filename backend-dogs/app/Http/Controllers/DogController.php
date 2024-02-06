@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dog;
 use Illuminate\Http\Request;
 
 class DogController extends Controller
@@ -27,7 +28,19 @@ class DogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dog = new Dog();
+        $dog->breed = $request->breed;
+        $dog->size = $request->size;
+        $dog->color = $request->color;
+
+        $fileName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('storage/images'), $fileName);
+
+        $dog->img = $fileName;
+
+        $dog->save();
+
+        return back()->with('success', 'Dog stored successfully!');
     }
 
     /**
