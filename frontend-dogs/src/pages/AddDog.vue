@@ -26,7 +26,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import backendUrl from '../config'
+import { backendUrl } from '../config'
 
 const options = [
   'Small',

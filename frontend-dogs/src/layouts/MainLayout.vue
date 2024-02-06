@@ -57,7 +57,7 @@ const linksList = [
   {
     title: 'Add dog',
     caption: 'Add dog',
-    icon: 'dog',
+    icon: 'pets',
     link: 'add-dog'
   }
 ]
