@@ -1,6 +1,6 @@
 <template>
   <q-page class="dog-page flex flex-center">
-    <div v-if="dog">
+    <div v-if="dog?.breed">
       <h1>{{ dog.breed }}</h1>
       <div>
         <picture>
