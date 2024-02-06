@@ -58,7 +58,7 @@ const linksList = [
     title: 'Add dog',
     caption: 'Add dog',
     icon: 'pets',
-    link: 'add-dog'
+    link: '/add-dog'
   }
 ]
 

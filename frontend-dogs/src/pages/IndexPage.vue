@@ -13,7 +13,7 @@
     </div>
     <div v-else>
       <p>No dogs available</p>
-      <a href="./add-dog">Add dog</a>
+      <a href="/add-dog">Add dog</a>
     </div>
   </q-page>
 </template>

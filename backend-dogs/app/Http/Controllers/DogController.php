@@ -32,6 +32,22 @@ class DogController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'breed' => 'required|max:255',
+                'size' => 'required|max:255',
+                'color' => 'required|max:255',
+                'image' => 'required|image',
+            ],
+            [
+                'breed.required' => 'Breed is required.',
+                'size.required' => 'Size is required.',
+                'color.required' => 'Color is required.',
+                'image.required' => 'Image is required.',
+                'image.image' => 'Image must be a valid image.',
+            ]
+        );
+
         $dog = new Dog();
         $dog->breed = $request->breed;
         $dog->size = $request->size;
