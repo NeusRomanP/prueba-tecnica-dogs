@@ -59,6 +59,12 @@ const linksList = [
     caption: 'Add dog',
     icon: 'pets',
     link: '/add-dog'
+  },
+  {
+    title: 'Elj Copy',
+    caption: 'Elj Copy',
+    icon: 'content_copy',
+    link: '/elj-copy'
   }
 ]
 
