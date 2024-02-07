@@ -50,11 +50,13 @@
     <q-page-container style="padding: 0px;">
       <router-view />
     </q-page-container>
+    <EljFooter />
   </q-layout>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import EljFooter from 'src/components/EljFooter.vue'
 
 const leftDrawerOpen = ref(false)
 

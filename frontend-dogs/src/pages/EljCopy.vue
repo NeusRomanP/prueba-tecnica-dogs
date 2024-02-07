@@ -64,12 +64,14 @@
     </section>
     <SecondSection />
     <FormSection />
+    <PartnersSection />
   </q-page>
 </template>
 <script setup>
 import { ref } from 'vue'
 import SecondSection from 'src/components/SecondSection.vue'
 import FormSection from 'src/components/FormSection.vue'
+import PartnersSection from 'src/components/PartnersSection.vue'
 
 const slide = ref(1)
 const autoplay = ref(true)
