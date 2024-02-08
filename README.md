@@ -11,8 +11,11 @@
 
 - Create an empty database and setup the infromation in your .env file  
 
-- Run:  
+- Run migrations:  
   `php artisan migrate`
+
+- Create symbolic link:  
+  `php artisan storage:link`
 
 - Run project:  
   `php artisan serve`
